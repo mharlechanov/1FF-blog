@@ -8,6 +8,7 @@ const drpDownS = document.querySelectorAll(".drp-icon")
 const burger = document.querySelector(".burger")
 const closeButton = document.querySelector(".xBtn")
 const mobileMenu = document.getElementById("mobileMenu")
+const mobileDropD = document.querySelector(".languageAllMobile")
 let darkMode = localStorage.getItem("dark-mode");
 
 const enableDarkMode = () => {
@@ -16,8 +17,8 @@ const enableDarkMode = () => {
     theme.classList.add("dark-mode-theme");
     logo.classList.add("invert")
     logoMob.classList.add("invert")
-    
-    mobileMenu.style.backgroundColor = "#201d34";;
+    mobileDropD.style.backgroundColor = "#201d34";
+    mobileMenu.style.backgroundColor = "#201d34";
     closeButton.classList.add("invert");
     for (const drpDown of drpDownS) {
         drpDown.classList.add('invert');
@@ -41,7 +42,8 @@ const disableDarkMode = () => {
     logo.classList.remove("invert")
     burger.classList.remove('invert');
     logoMob.classList.remove("invert")
-    mobileMenu.style.backgroundColor = "white";;
+    mobileDropD.style.backgroundColor = "white";
+    mobileMenu.style.backgroundColor = "white";
     closeButton.classList.remove("invert");
     
     for (const drpDown of drpDownS) {
